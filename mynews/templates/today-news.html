@@ -1,4 +1,32 @@
 {%extends 'base.html'%}
 {% block content %}
 {{block.super}}
+<style>
+    h2{
+        color: red;
+    }
+</style>
+<div class="container">
+
+    <!-- Looping through news   -->
+    {% for news_item in news %}
+  
+    <div class="row">
+      <!-- displaying News articles -->
+      
+        <h2 class="text-center"> {{ news_item.title }} </h2>
+  
+    </div>
+    <div class="row">
+        <div class="card card-body">
+            <h1>{{news_item.post}}</h1>
+            {% comment %} <span class="badge bg-warning text-dark">{{news_item.tags}}</span>
+            <span class="badge bg-info text-dark">{{news_item.pub_date}}</span> {% endcomment %}
+        </div>
+    </div>
+    {% endfor %}
+  
+  </div>
+
+
 {% endblock %}
