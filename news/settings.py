@@ -75,7 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'news.wsgi.application'
 
-
+# adding config
+cloudinary.config( 
+  cloud_name = "moringa-chit-fund-private-limited", 
+  api_key = "177778488814987", 
+  api_secret = "_7SSmn6ASgdrXTjtRRIyT8gagEY" 
+)
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
