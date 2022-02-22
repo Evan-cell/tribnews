@@ -21,7 +21,7 @@ class tags(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=30)
     post = models.TextField()
-    image = CloudinaryField('image')
+    image = CloudinaryField('image',default='image')
     Editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
