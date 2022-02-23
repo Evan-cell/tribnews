@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mynews',
     'cloudinary',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
